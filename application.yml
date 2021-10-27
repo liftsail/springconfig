@@ -1,0 +1,25 @@
+server:
+  port: 8080      # 端口号
+
+# 指定Eureka服务地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka,http://localhost:7003/eureka
+
+#指定服务的名称
+spring:
+  application:
+    name: config
+  #config服务的配置
+  cloud:
+    config:
+      server:
+        git:
+          basedir: F:\basedir    # 本地仓库的地址
+          username: liftsails@163.com    #  远程仓库用户名
+          password: ycjh9120   #   远程仓库密码
+          uri: https://github.com/liftsail/springconfig.git       # 远程仓库地址
+
+
+
